@@ -23,6 +23,7 @@ h2, h3, h4, h5, h6 {
     color: #1e1e1e;
 }
 
+
 section{
     min-height:100vh ;
     width: 100%;
@@ -57,7 +58,21 @@ p{
 }
 
 /*  utilites */
-
+.loading-layer{
+    z-index: 5555;
+    min-height: 100vh;
+    opacity: 1;
+}
+.hide{
+    animation-name: hide;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes hide {
+    0%{opacity: 1;}
+    100%{opacity: 0;display: none;}
+}
 .secondry-heading{
     margin-bottom: 0.5rem;
 }

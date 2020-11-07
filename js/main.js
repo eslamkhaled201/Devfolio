@@ -1,6 +1,7 @@
 let mainHeading = document.querySelector(".typewritter");
 let navBar = document.querySelector('.navbar');
 let counters = document.querySelectorAll('.number');
+let loadingLayer= document.getElementById("loading-layer");
 let speed = 200;
 
 let typewritter = new Typewriter( mainHeading ,{
@@ -11,16 +12,22 @@ let typewritter = new Typewriter( mainHeading ,{
     typeSpeed:60,
     deleteSpeed:60
 });
-
 function editNavBar() {
     if (window.scrollY >= 400) {
-        navBar.classList.replace('navbar-dark', 'navbar-light');
+        navBar.classList.replace('navbar-dark', 'navbar-primary');
         $(navBar).addClass("bg-light navbar-shadow");
     } else {
-        navBar.classList.replace('navbar-light', 'navbar-dark');
+        navBar.classList.replace('navbar-primary', 'navbar-dark');
         $(navBar).removeClass("bg-light navbar-shadow");
     }
 }
+window.onload = ()=>{
+    let scrollY = window.scrollY;
+    loadingLayer.style.top= `${scrollY}px`;
+    editNavBar();
+};
+loadingLayer.classList.add("hide");
+
 
 $(window).scroll(function () {
     editNavBar();

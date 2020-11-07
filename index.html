@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,12 @@
     />
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
+  <body class="position-relative" >
+    <div id="loading-layer" class="loading-layer  w-100 bg-white   position-absolute utility-center-content justify-center">
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
     <header>
       <nav class="navbar navbar-expand-lg p-3 navbar-dark fixed-top">
         <div class="container-xl">
