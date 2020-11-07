@@ -73,9 +73,6 @@ p{
     0%{opacity: 1;}
     100%{opacity: 0;display: none;}
 }
-.secondry-heading{
-    margin-bottom: 0.5rem;
-}
 .secondry-heading-underline{
     width: 20%;
     height: 3px;
@@ -628,16 +625,13 @@ margin-bottom: 2rem;
     .main-heading{
         font-size: 2.5rem;
     }
+    .section__about-me .container > .row{
+        padding: 0 1rem;
+    }
     .row > div{
-        margin: 2rem 0 0;
+        margin: 1rem 0 0;
     }
-    .row > div:last-child{
-        margin-bottom: 0;
-    }
-    .secondry-heading{
-        margin-top: 2.5rem;
-        margin-bottom: 0px;
-    }
+   
     .section__blogs .row{
         margin-top: 0px;
     }
