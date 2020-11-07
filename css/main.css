@@ -58,6 +58,7 @@ p{
 
 /*  utilites */
 .loading-layer{
+    top: 0;
     z-index: 5555;
     min-height: 100%;
     opacity: 1;

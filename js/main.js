@@ -32,6 +32,7 @@ function editNavBar() {
 } 
 disableScroll();*/
 document.onload = ()=>{
+    
     editNavBar();
 };
 window.addEventListener("load" ,()=>{
