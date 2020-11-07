@@ -1,0 +1,16 @@
+footer{
+    width: 100%;    
+    padding: 25px 0;
+    background: #0062d3;
+    color: #ffff;
+}
+footer .container{
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+.copy-rights{
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    text-align: center;
+}
