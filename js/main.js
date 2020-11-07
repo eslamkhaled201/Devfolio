@@ -15,10 +15,10 @@ let typewritter = new Typewriter( mainHeading ,{
 function editNavBar() {
     if (window.scrollY >= 400) {
         navBar.classList.replace('navbar-dark', 'navbar-primary');
-        $(navBar).addClass("bg-light navbar-shadow");
+        $(navBar).addClass("white-backgroud navbar-shadow");
     } else {
         navBar.classList.replace('navbar-primary', 'navbar-dark');
-        $(navBar).removeClass("bg-light navbar-shadow");
+        $(navBar).removeClass("white-backgroud navbar-shadow");
     }
 }
 document.addEventListener("DOMContentLoaded", ()=>{
