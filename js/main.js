@@ -21,14 +21,29 @@ function editNavBar() {
         $(navBar).removeClass("white-backgroud navbar-shadow");
     }
 }
+function disableScroll() { 
+    // Get the current page scroll position 
+  let  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  let  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft; 
+  
+        // if any scroll is attempted, set this to the previous value 
+        window.onscroll = function() { 
+            window.scrollTo(scrollLeft, scrollTop); 
+        }; 
+} 
 
-document.addEventListener("DOMContentLoaded", ()=>{
+window.onload = ()=>{
     let scrollY = window.scrollY;
     loadingLayer.style.top= `${scrollY}px`;
+    disableScroll();
     editNavBar();
-});
+};
 window.addEventListener("load" ,()=>{
-    loadingLayer.classList.add("hide");
+    loadingLayer.classList.add("hide")
+    function enableScroll() { 
+        window.onscroll = function() {}; 
+    };
+    enableScroll();
 })
 $(window).scroll(function () {
     let scrollY = window.scrollY;
