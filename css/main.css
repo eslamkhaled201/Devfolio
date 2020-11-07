@@ -65,8 +65,7 @@ p{
 }
 .hide{
     animation-name: hide;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 @keyframes hide {
