@@ -31,8 +31,8 @@ function disableScroll() {
             window.scrollTo(scrollLeft, scrollTop); 
         }; 
 } 
-
-document.onload = ()=>{
+disableScroll();
+window.onload = ()=>{
     let scrollY = window.scrollY;
     loadingLayer.style.top= `${scrollY}px`;
     editNavBar();
@@ -42,9 +42,8 @@ window.addEventListener("load" ,()=>{
     function enableScroll() { 
         window.onscroll = function() {}; 
     };
-   // enableScroll();
+   //enableScroll();
 })
-disableScroll();
 $(window).scroll(function () {
     console.log(window.pageYOffset ,window.scrollY)
     let scrollY = window.scrollY;
