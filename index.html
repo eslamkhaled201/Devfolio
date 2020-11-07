@@ -17,6 +17,18 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="position-relative" >
+    <script>
+      function disableScroll() { 
+          let  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+          let  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft; 
+          console.log(scrollTop ,scrollLeft)
+                window.onscroll = function() { 
+                    console.log(scrollTop ,scrollLeft)
+                    window.scrollTo(scrollLeft, scrollTop); 
+                }; 
+        } 
+        disableScroll();
+    </script>
     <div id="loading-layer" class="loading-layer  w-100 bg-white   position-absolute utility-center-content justify-center">
       <div class="spinner-border text-primary" role="status">
         <span class="sr-only">Loading...</span>

@@ -21,7 +21,7 @@ function editNavBar() {
         $(navBar).removeClass("white-backgroud navbar-shadow");
     }
 }
-function disableScroll() { 
+/*9function disableScroll() { 
   let  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
   let  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft; 
   console.log(scrollTop ,scrollLeft)
@@ -30,9 +30,8 @@ function disableScroll() {
             window.scrollTo(scrollLeft, scrollTop); 
         }; 
 } 
-disableScroll();
+disableScroll();*/
 document.onload = ()=>{
-    disableScroll();
     editNavBar();
 };
 window.addEventListener("load" ,()=>{
