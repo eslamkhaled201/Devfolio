@@ -21,14 +21,14 @@ function editNavBar() {
         $(navBar).removeClass("bg-light navbar-shadow");
     }
 }
-window.onload = ()=>{
+document.addEventListener("DOMContentLoaded", ()=>{
     let scrollY = window.scrollY;
     loadingLayer.style.top= `${scrollY}px`;
     editNavBar();
-};
-loadingLayer.classList.add("hide");
-
-
+});
+window.addEventListener("load" ,()=>{
+    loadingLayer.classList.add("hide");
+})
 $(window).scroll(function () {
     editNavBar();
     if (window.scrollY >= 2000) {
