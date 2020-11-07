@@ -22,19 +22,17 @@ function editNavBar() {
     }
 }
 function disableScroll() { 
-    // Get the current page scroll position 
   let  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
   let  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft; 
-  
-        // if any scroll is attempted, set this to the previous value 
+  console.log(scrollTop ,scrollLeft)
         window.onscroll = function() { 
+            console.log(scrollTop ,scrollLeft)
             window.scrollTo(scrollLeft, scrollTop); 
         }; 
 } 
 disableScroll();
-window.onload = ()=>{
-   /* let scrollY = window.scrollY;
-    loadingLayer.style.top= `${scrollY}px`;*/
+document.onload = ()=>{
+    disableScroll();
     editNavBar();
 };
 window.addEventListener("load" ,()=>{

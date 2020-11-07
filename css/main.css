@@ -59,7 +59,7 @@ p{
 /*  utilites */
 .loading-layer{
     z-index: 5555;
-    min-height: 100vh;
+    min-height: 100%;
     opacity: 1;
 }
 .hide{
