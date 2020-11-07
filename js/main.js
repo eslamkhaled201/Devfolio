@@ -32,20 +32,21 @@ function disableScroll() {
         }; 
 } 
 
-window.onload = ()=>{
+document.onload = ()=>{
     let scrollY = window.scrollY;
     loadingLayer.style.top= `${scrollY}px`;
-    disableScroll();
     editNavBar();
 };
 window.addEventListener("load" ,()=>{
-    loadingLayer.classList.add("hide")
+    //loadingLayer.classList.add("hide")
     function enableScroll() { 
         window.onscroll = function() {}; 
     };
-    enableScroll();
+   // enableScroll();
 })
+disableScroll();
 $(window).scroll(function () {
+    console.log(window.pageYOffset ,window.scrollY)
     let scrollY = window.scrollY;
     loadingLayer.style.top= `${scrollY}px`;
     editNavBar();
