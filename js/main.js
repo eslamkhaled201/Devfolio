@@ -21,6 +21,7 @@ function editNavBar() {
         $(navBar).removeClass("white-backgroud navbar-shadow");
     }
 }
+
 document.addEventListener("DOMContentLoaded", ()=>{
     let scrollY = window.scrollY;
     loadingLayer.style.top= `${scrollY}px`;
@@ -30,6 +31,8 @@ window.addEventListener("load" ,()=>{
     loadingLayer.classList.add("hide");
 })
 $(window).scroll(function () {
+    let scrollY = window.scrollY;
+    loadingLayer.style.top= `${scrollY}px`;
     editNavBar();
     if (window.scrollY >= 2000) {
         counters.forEach(counter => {
