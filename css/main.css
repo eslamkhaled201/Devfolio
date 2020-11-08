@@ -389,7 +389,7 @@ margin-bottom: 2rem;
 
 /* section testimonials*/
 .section__testimonials ,.section__contact{
-    background-image: url("../images/testmonail\ .jpeg");
+    background-image: url("../images/testmonail.jpeg");
     min-height: 80vh;
     background-size: cover;
 }
@@ -454,11 +454,6 @@ margin-bottom: 2rem;
 /*  start section blog */
 .section__blog .section__header {
     margin-bottom: 0;
-}
-.section__blog .grid-row{
-   grid-template-columns: repeat(auto-fill ,minmax(20rem , 1fr));
-   column-gap: 2rem;
-   row-gap: 2rem;
 }
 .blog{
     display: flex ;
