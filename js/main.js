@@ -35,7 +35,7 @@ window.onload = () => {
         window.onscroll = function () { };
     };
     enableScroll();
-    loadingLayer.classList.add("hide");
+    loadingLayer.classList.add("hide" ,"d-none");
 };
 
 $(window).scroll(function () {

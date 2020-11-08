@@ -68,7 +68,7 @@ p{
     animation-fill-mode: forwards;
 }
 @keyframes hide {
-    0%{opacity: 1;}
+    0%{opacity: 1;display: flex;}
     100%{opacity: 0;display: none;}
 }
 .secondry-heading-underline{
