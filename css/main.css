@@ -455,9 +455,10 @@ margin-bottom: 2rem;
     padding: 8px 10px;
     font-weight: 500;
     text-transform: uppercase;
-    top: -8%;
+    top: 0;
     letter-spacing: 1px;
-    left: 36%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .blog-title  h4{
     margin-top: 1rem;
@@ -609,7 +610,7 @@ margin-bottom: 2rem;
         padding: 0 1rem;
     }
     .row > div{
-        margin: 1rem 0 0;
+        margin: 1.5rem 0 0;
     }
    
     .section__blogs .row{
