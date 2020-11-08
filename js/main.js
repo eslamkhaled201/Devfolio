@@ -1,16 +1,16 @@
 let mainHeading = document.querySelector(".typewritter");
 let navBar = document.querySelector('.navbar');
 let counters = document.querySelectorAll('.number');
-let loadingLayer= document.getElementById("loading-layer");
+let loadingLayer = document.getElementById("loading-layer");
 let speed = 200;
 
-let typewritter = new Typewriter( mainHeading ,{
-    strings:[ 'CEO Devfolio' , 'web Developer', 'web Designer', 'Front End Developer' , 'Graphic Desinger' ],
-    loop:true,
-    autoStart:true,
+let typewritter = new Typewriter(mainHeading, {
+    strings: ['CEO Devfolio', 'web Developer', 'web Designer', 'Front End Developer', 'Graphic Desinger'],
+    loop: true,
+    autoStart: true,
     cursur: "Pipe character",
-    typeSpeed:60,
-    deleteSpeed:60
+    typeSpeed: 60,
+    deleteSpeed: 60
 });
 function editNavBar() {
     if (window.scrollY >= 400) {
@@ -21,31 +21,24 @@ function editNavBar() {
         $(navBar).removeClass("white-backgroud navbar-shadow");
     }
 }
-/*9function disableScroll() { 
-  let  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
-  let  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft; 
-  console.log(scrollTop ,scrollLeft)
-        window.onscroll = function() { 
-            console.log(scrollTop ,scrollLeft)
-            window.scrollTo(scrollLeft, scrollTop); 
-        }; 
-} 
-disableScroll();*/
-document.onload = ()=>{
-    
-    editNavBar();
-};
-window.addEventListener("load" ,()=>{
-    loadingLayer.classList.add("hide")
-    function enableScroll() { 
-        window.onscroll = function() {}; 
+function disableScroll() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    window.onscroll = function () {
+        window.scrollTo(scrollLeft, scrollTop);
     };
-   enableScroll();
-})
+}
+$(document).ready(disableScroll())
+loadingLayer.style.top = `${window.scrollY}px`;
+window.onload = () => {
+    function enableScroll() {
+        window.onscroll = function () { };
+    };
+    enableScroll();
+    loadingLayer.classList.add("hide");
+};
+
 $(window).scroll(function () {
-    console.log(window.pageYOffset ,window.scrollY)
-    let scrollY = window.scrollY;
-    loadingLayer.style.top= `${scrollY}px`;
     editNavBar();
     if (window.scrollY >= 2000) {
         counters.forEach(counter => {
