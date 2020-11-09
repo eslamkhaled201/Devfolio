@@ -174,12 +174,12 @@ p{
 }
 .hide{
     animation-name: hide;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 @keyframes hide {
-    0%{opacity: 1;display: flex;}
-    100%{opacity: 0;display: none;}
+    0%{opacity: 1;}
+    100%{opacity: 0;}
 }
 
 /*  section about me start */
