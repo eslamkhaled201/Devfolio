@@ -168,7 +168,19 @@ p{
 
 
 /*  end utilites */
-
+/*  loading page  */
+.loading-layer{
+    height: 100vh;
+}
+.hide{
+    animation-name: hide;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes hide {
+    0%{opacity: 1;display: flex;}
+    100%{opacity: 0;display: none;}
+}
 
 /*  section about me start */
 
